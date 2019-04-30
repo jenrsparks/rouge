@@ -1,0 +1,4 @@
+index=sitename sourcetype=jboss source="*.log" "Specific Error message"
+| stats count by actionType
+| eval actionPremise=replace(actionType, ":.*", "")
+| chart count by actionType over actionPremise

@@ -15,3 +15,5 @@ Gemfile.lock
 
 # IntelliJ IDEA / RubyMine
 .idea/
+_site/*
+=

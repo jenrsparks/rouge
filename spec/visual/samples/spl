@@ -1,0 +1,11 @@
+| stats count
+| fields - count
+| eval one="one 1 one"
+| eval two="two more than 2"
+| append [
+    | stats count 
+    | fields - count
+    | eval one="one more"
+    | eval two="2 past two"
+    ]
+| chart count by one over two
